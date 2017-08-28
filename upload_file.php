@@ -50,3 +50,5 @@ if ($_FILES["upload_file"]["error"] > 0) {
 }
 
 ?>
+<br><br><br>
+<a href="upload.php">Continue Upload</a>
