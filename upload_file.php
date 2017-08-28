@@ -40,9 +40,9 @@ if ($_FILES["upload_file"]["error"] > 0) {
     move_uploaded_file($_FILES["upload_file"]["tmp_name"], "upload/" . $_FILES["upload_file"]["name"]);
     echo "Stored in: " . "upload/" . $_FILES["upload_file"]["name"] . "<br/>";
 
-    // If file size less than 1MB, display base64 content.
+    // If file size less than 150k, display base64 content.
     $filename = "upload/" . $_FILES["upload_file"]["name"];
-    if ($_FILES["upload_file"]["size"] / 1024 <= 1024) {
+    if ($_FILES["upload_file"]["size"] / 1024 < 150) {
       $imgbinary = fread(fopen($filename, "r"), filesize($filename));
       echo base64_encode($imgbinary);
     }
