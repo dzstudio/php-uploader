@@ -11,3 +11,5 @@
 4. 进入服务器目录, 新建upload目录, 将本库中的文件复制到该目录下面
 5. sudo apachectl start 启动服务器
 6. 打开 localhost/upload 进行测试
+
+![Example](https://raw.githubusercontent.com/dzstudio/php-uploader/master/example.png)
